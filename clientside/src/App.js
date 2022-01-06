@@ -17,16 +17,17 @@ function App() {
       ...tasks,
     ]);
   };
-  
+  const removeTodo = ({id}) => {
+    const newTodos = [...tasks];
+    newTodos.splice(id, 1);
+    setTasks(newTodos);
+  };
   return (
     <div className="App">
-     
-      
-
       <div className="container">
       <Header></Header>
       <TaskEdit task={{}} onSaveTask={onSaveTask} />      
-        <Tasks tasks={tasks}></Tasks>
+      <Tasks tasks={tasks}  removeTodo={removeTodo}></Tasks>
       </div>
     </div>
   );

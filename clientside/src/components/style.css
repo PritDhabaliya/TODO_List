@@ -1,0 +1,13 @@
+.fl{
+    float: left;
+    text-align: left;
+}
+.fr{
+    float: right;
+}
+.inp{
+    width: 80%;
+}
+.inpp{
+    width: 20%;
+}

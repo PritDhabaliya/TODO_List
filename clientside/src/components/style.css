@@ -1,13 +1,25 @@
 .fl{
     float: left;
-    text-align: left;
+   
 }
 .fr{
     float: right;
 }
 .inp{
-    width: 80%;
+    width: 50%;
 }
 .inpp{
+    width: 30%;
+}
+.inp3{
     width: 20%;
+}
+.cont{
+    color: wheat;
+}
+.cont2{
+    color:yellow
+}
+.bg{
+    color: red;
 }

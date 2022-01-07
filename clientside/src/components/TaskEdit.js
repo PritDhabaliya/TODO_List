@@ -1,6 +1,6 @@
 import { useState } from "react";
 import './style.css'
-function TaskEdit({ task, onSaveTask }) {
+function TaskEdit({ onSaveTask }) {
   const [desc, setDesc] = useState("");
   const [date, setDate] = useState("");
 
@@ -12,21 +12,25 @@ function TaskEdit({ task, onSaveTask }) {
     setDate("");
   };
   return (
-    <div className="card">
-      <form onSubmit={saveTask}>
-        <label htmlFor="desc" className="fl">Description</label>
+    
+    <div>
+       
+      <div>
+      <form onSubmit={saveTask} >
+        <p className="">
+        <label htmlFor="desc" className="fl">Task Name</label>
         <input
-        className="fl"
+        className="fl inp"
           type="text"
           name="desc"
           id="desc"
           value={desc}
           onChange={(e) => setDesc(e.target.value)}
+          required
         />
-
         <label htmlFor="date"className="">Date</label>
         <input
-          className=""
+          className="inpp"
           type="text"
           name="date"
           id="date"
@@ -35,10 +39,13 @@ function TaskEdit({ task, onSaveTask }) {
         />
 
         
-          <button className="btn-primary fr" type="submit">
-            ADD
+          <button className="btn-primary fr inp1" type="submit">
+           <i className="fa fa-plus"></i>
+            <h7> ADD TODO</h7>
           </button>
+          </p>
       </form>
+      </div>
     </div>
   );
 }

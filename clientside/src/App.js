@@ -6,8 +6,8 @@ import { useState } from "react";
 
 function App() {
   const [tasks, setTasks] = useState([
-    { desc: "Learn React", id: 1, date: "5/1/21", complete:false},
-    { desc: "Profit", id: 2, date:"5/1/21", complete:false },
+    { desc: "task1", id: 1, date: "6/1/21", complete:false},
+    { desc: "task2", id: 2, date:"6/1/21", complete:false },
   ]);
  
   const onSaveTask = ({ desc, date }) => {

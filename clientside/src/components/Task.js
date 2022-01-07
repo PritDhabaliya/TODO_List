@@ -1,7 +1,12 @@
 import React from "react";
-
-
+import { useState } from "react";
+import './style.css'
 function Task({ task, removeTodo }) {
+    const [style, setStyle] = useState("cont");
+    const changecolor = () => {
+      console.log("you just clicked");
+      setStyle("cont2");
+    };
     
     return (
 
@@ -10,17 +15,15 @@ function Task({ task, removeTodo }) {
           <div className="col-10">
             <h4>
                 <p className="fl">{task.date}</p>
-                {task.desc}{task.id}
+                {task.desc}
             </h4>
           </div>
             
           <div className="col-2 is-center">
-          <button className='fr cl'><i className='fa fa-star '></i></button>
-          <button className="fr" onClick={removeTodo}>delete</button>
+          <p className="fr bg"><button  className={style} onClick={changecolor}><i className='fa fa-star '></i></button>
+          <button className="bg" onClick={removeTodo}><i class="fas fa-trash"></i>   delete</button></p>
           </div>
-          <div className="col-12">
-            <p>{task.remarks}</p>
-          </div>
+         
         </div>
       </div>
     );

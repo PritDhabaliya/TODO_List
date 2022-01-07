@@ -17,10 +17,10 @@ function App() {
       ...tasks,
     ]);
   };
-  const removeTodo = ({id}) => {
+  const removeTodo = (id) => {
     const newTodos = [...tasks];
-    newTodos.splice(id, 1);
-    setTasks(newTodos);
+    setTasks((newTodos)=>newTodos.filter((item)=>item.id !== id));
+    
   };
   return (
     <div className="App">
